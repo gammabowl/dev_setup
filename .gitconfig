@@ -1,0 +1,15 @@
+[user]
+	email = <github.email>
+	name = <github.username>
+[push]
+	default = simple
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+[core]
+	autocrlf = input
+[credential]
+	helper = cache --timeout 7200
+[alias]
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
